@@ -1,0 +1,23 @@
+{
+  "name": "backend-project-3",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },
+  "author": "Ayush Barman",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^8.16.2"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.0",
+    "nodemon": "^3.1.10"
+  }
+}

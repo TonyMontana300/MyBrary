@@ -9,6 +9,7 @@ import bodyParser from "body-parser";
 
 import indexRouter from "./routes/index.routes.js";
 import authorsRouter from "./routes/authors.routes.js";
+import booksRouter from "./routes/books.routes.js";
 
 app.set("view engine", "ejs");
 app.set("views", "./views");
@@ -27,5 +28,6 @@ mongoose.connect(process.env.MONGODB_URI)
 
 app.use("/", indexRouter);
 app.use("/authors", authorsRouter);
+app.use("/books", booksRouter)
 
 app.listen(process.env.PORT || 3000);

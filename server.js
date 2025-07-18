@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 if (process.env.NODE_ENV !== "production") {
     dotenv.config();
 }
+import methodOverride from "method-override"
 import express from "express";
 const app = express();
 import expressLayouts from "express-ejs-layouts";
@@ -15,6 +16,7 @@ app.set("view engine", "ejs");
 app.set("views", "./views");
 app.set("layout", "layouts/layout");
 app.use(expressLayouts);
+app.use(methodOverride('_method'));
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({limit: '10mb', extended: false}));
 
